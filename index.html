@@ -3,167 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dr. Mahmoud Scholar GPT: an academic research assistant for literature reviews, evidence appraisal, and verified scientific references.">
+  <meta name="description" content="The Dr. Mahmoud research platform brings together PhytoPrecision for evidence-informed natural-product assessment and Dr. Mahmoud Scholar GPT for academic research, manuscript review, and scientific writing.">
   <meta name="theme-color" content="#0b1730">
-  <title>Dr. Mahmoud Scholar GPT | Academic Research Assistant</title>
+  <title>Dr. Mahmoud Research Platform | PhytoPrecision & Scholar GPT</title>
   <style>
-    :root{--ink:#14213d;--muted:#5e6b82;--paper:#f5f7fb;--white:#fff;--green:#193765;--lime:#d6b978;--line:#dce3ef;--dark:#0b1730}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    :root{--ink:#14213d;--muted:#5e6b82;--paper:#f5f7fb;--white:#fff;--blue:#193765;--gold:#d6b978;--line:#dce3ef;--dark:#0b1730}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
     body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:inherit}
-    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    header{border-bottom:1px solid var(--line);background:rgba(247,248,244,.94)}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(247,248,244,.96)}
     .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:760;letter-spacing:-.04em;font-size:1.25rem;text-decoration:none}
-    .brand span{color:var(--green)}
-    .navlinks{display:flex;gap:24px;flex-wrap:wrap}
-    .navlinks a{font-size:.92rem;text-decoration:none;color:var(--muted)}
-    .navlinks a:hover{color:var(--green)}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#081329 0%,#10284d 58%,#173a65 100%);color:#f7f9ff;padding:96px 0 90px}
+    .brand{font-weight:760;letter-spacing:-.04em;font-size:1.15rem;text-decoration:none}.brand span{color:var(--blue)}
+    .navlinks{display:flex;gap:20px;flex-wrap:wrap}.navlinks a{font-size:.9rem;text-decoration:none;color:var(--muted)}.navlinks a:hover{color:var(--blue)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#081329 0%,#10284d 58%,#173a65 100%);color:#f7f9ff;padding:88px 0 78px}
     .hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(214,185,120,.28);border-radius:50%;right:-110px;top:-190px;box-shadow:0 0 0 45px rgba(214,185,120,.045),0 0 0 100px rgba(214,185,120,.03);pointer-events:none}
-    .eyebrow{font-size:.76rem;letter-spacing:.19em;text-transform:uppercase;color:#e6cc91;font-weight:700}
-    h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:1.04;letter-spacing:-.065em;max-width:800px;margin:20px 0 24px}
-    h1 em{font-style:normal;color:var(--lime)}
-    .lead{font-size:clamp(1.08rem,2vw,1.28rem);max-width:720px;color:#d9e2f1;margin:0 0 32px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:5px;text-decoration:none;font-weight:700;font-size:.94rem;border:1px solid transparent}
-    .btn-primary{background:linear-gradient(135deg,#e7d19d,#c5a45f);color:#101b32}
-    .btn-secondary{border-color:#8fa3c5;color:#f7f9ff}
-    .btn:hover{transform:translateY(-1px)}
-    .hero-note{margin-top:38px;color:#b8c7df;font-size:.83rem;letter-spacing:.04em}
-    section{padding:72px 0}
-    .section-head{max-width:730px;margin-bottom:34px}
-    .kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:800}
-    h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.12;letter-spacing:-.045em;margin:10px 0 14px}
-    .section-head p{color:var(--muted);margin:0}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--white);border:1px solid var(--line);padding:25px;border-radius:8px;min-height:200px}
-    .num{font-size:.8rem;color:var(--green);font-weight:800;letter-spacing:.1em}
-    h3{font-size:1.15rem;letter-spacing:-.02em;margin:12px 0 8px}
-    .card p{margin:0;color:var(--muted);font-size:.95rem}
-    .process{background:#edf1f8}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .step{border-top:2px solid #b99752;padding-top:17px}
-    .step strong{display:block;margin-bottom:6px}
-    .step p{margin:0;color:var(--muted);font-size:.93rem}
-    .callout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;background:#e9eef7;border:1px solid #d5deec;padding:30px;border-radius:8px}
-    .callout p{margin:0;color:var(--muted)}
-    .callout h2{font-size:1.7rem;margin-top:0}
-    .scope{border-left:3px solid #b99752;padding:18px 22px;background:#fff}
-    .scope p{margin:0;color:var(--muted);font-size:.94rem}
-    footer{background:var(--dark);color:#d8e2dc;padding:28px 0;font-size:.85rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    footer a{color:var(--lime)}
-    @media(max-width:760px){.nav{align-items:flex-start;padding:18px 0;flex-direction:column}.navlinks{gap:14px}.hero{padding:68px 0}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.callout{grid-template-columns:1fr}}
-    @media(max-width:430px){.wrap{width:min(100% - 28px,1120px)}.steps{grid-template-columns:1fr}.navlinks{font-size:.85rem}}
+    .eyebrow,.kicker{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;font-weight:800}.eyebrow{color:#e6cc91}
+    h1{font-size:clamp(2.6rem,6vw,4.9rem);line-height:1.04;letter-spacing:-.065em;max-width:850px;margin:20px 0 24px}h1 em{font-style:normal;color:var(--gold)}
+    .lead{font-size:clamp(1.06rem,2vw,1.25rem);max-width:780px;color:#d9e2f1;margin:0 0 30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:5px;text-decoration:none;font-weight:750;font-size:.93rem;border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg,#e7d19d,#c5a45f);color:#101b32}.btn-secondary{border-color:#8fa3c5;color:#f7f9ff}.btn:hover{transform:translateY(-1px)}
+    .hero-note{margin-top:34px;color:#b8c7df;font-size:.82rem;letter-spacing:.04em}
+    section{padding:70px 0}.section-head{max-width:760px;margin-bottom:32px}.kicker{color:var(--blue)}
+    h2{font-size:clamp(1.9rem,3vw,2.65rem);line-height:1.12;letter-spacing:-.045em;margin:10px 0 14px}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--white);border:1px solid var(--line);padding:24px;border-radius:8px;min-height:190px}
+    .num{font-size:.78rem;color:var(--blue);font-weight:850;letter-spacing:.1em}h3{font-size:1.15rem;letter-spacing:-.02em;margin:12px 0 8px}.card p{margin:0 0 15px;color:var(--muted);font-size:.95rem}
+    .card-link{font-weight:750;color:var(--blue);text-decoration:none}.card-link:hover{text-decoration:underline}
+    .process{background:#edf1f8}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:2px solid #b99752;padding-top:16px}.step strong{display:block;margin-bottom:6px}.step p{margin:0;color:var(--muted);font-size:.93rem}
+    .callout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;background:#e9eef7;border:1px solid #d5deec;padding:28px;border-radius:8px}.callout p{margin:0;color:var(--muted)}.callout h2{font-size:1.65rem;margin-top:0}
+    .scope{border-left:3px solid #b99752;padding:18px 22px;background:#fff}.scope p{margin:0;color:var(--muted);font-size:.94rem}
+    footer{background:var(--dark);color:#d8e2dc;padding:28px 0;font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{color:var(--gold)}
+    @media(max-width:760px){.nav{align-items:flex-start;padding:18px 0;flex-direction:column}.navlinks{gap:13px}.hero{padding:65px 0}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.callout{grid-template-columns:1fr}}
+    @media(max-width:430px){.wrap{width:min(100% - 28px,1120px)}.steps{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top">Dr. Mahmoud <span>Scholar GPT</span></a>
+      <a class="brand" href="#top">Dr. Mahmoud <span>Research Platform</span></a>
       <nav class="navlinks" aria-label="Main navigation">
-        <a href="#about">About Dr. Mahmoud</a><a href="#capabilities">Capabilities</a><a href="#approach">Approach</a><a href="#workflow">Workflow</a><a href="#scope">Scope</a>
+        <a href="#platforms">Platforms</a><a href="#scholar">Scholar GPT</a><a href="#phyto">PhytoPrecision</a><a href="#workflow">Method</a><a href="#scope">Responsible use</a>
       </nav>
     </div>
   </header>
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <div class="eyebrow">ACADEMIC RESEARCH · EVIDENCE · VERIFIED REFERENCES</div>
-        <h1>Stronger research.<br><em>Verified</em> scientific insight.</h1>
-        <p class="lead">Dr. Mahmoud Scholar GPT is an academic research assistant for literature discovery and synthesis, critical manuscript review, scientific writing and editing, research planning, and reference and DOI verification. It helps organize evidence, clarify limitations, and improve scholarly communication across research stages.</p>
+        <div class="eyebrow">ACADEMIC RESEARCH · NATURAL PRODUCTS · EVIDENCE</div>
+        <h1>Two research pathways.<br><em>One evidence-led</em> approach.</h1>
+        <p class="lead">The Dr. Mahmoud Research Platform brings together Dr. Mahmoud Scholar GPT for academic research and scientific writing, and PhytoPrecision for structured, evidence-informed work on medicinal natural products and herb–drug interaction questions. Each serves a distinct purpose; both put source quality, transparent uncertainty, and human expert judgment first.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://chatgpt.com/share/6ad93138-1f74-83eb-96ad-b664f6692abe" target="_blank" rel="noopener noreferrer">Open Dr. Mahmoud Scholar GPT ↗</a>
-          <a class="btn btn-secondary" href="#approach">Explore the approach</a>
+          <a class="btn btn-primary" href="https://chatgpt.com/g/g-cP7u2HpoY-dr-mahmoud-scholar-gpt" target="_blank" rel="noopener noreferrer">Open Scholar GPT ↗</a>
+          <a class="btn btn-secondary" href="#platforms">Explore both platforms</a>
         </div>
-        <div class="hero-note">LITERATURE REVIEWS • MANUSCRIPT CRITIQUE • SCIENTIFIC WRITING • REFERENCE CHECKS</div>
+        <div class="hero-note">SCHOLARLY WRITING • EVIDENCE APPRAISAL • NATURAL-PRODUCT RESEARCH • INTERACTION ASSESSMENT</div>
       </div>
     </section>
-    <section id="about">
+    <section id="platforms">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">About the scholar</div>
-          <h2>Dr. Mahmoud A. H. Mostafa</h2>
-          <p>Pharmaceutical sciences researcher and academic specializing in pharmacognosy, medicinal natural products, phytochemistry, and evidence-informed approaches to natural-product research.</p>
+          <div class="kicker">A connected research environment</div>
+          <h2>Choose the right tool for the task.</h2>
+          <p>Use Scholar GPT to improve the research process and academic outputs. Use PhytoPrecision as the developing framework for structured analysis of medicinal natural products and interaction-related evidence. They are complementary, not interchangeable.</p>
         </div>
         <div class="grid">
-          <article class="card"><div class="num">ACADEMIC AFFILIATIONS</div><h3>Teaching and research</h3><p>Assistant Professor at Taibah University, Madinah, Saudi Arabia. Associate Professor of Pharmacognosy and Medicinal Natural Products at Al-Azhar University, Assiut, Egypt. Current titles and institutional affiliations should be verified against the latest official university records before formal publication.</p></article>
-          <article class="card"><div class="num">EDUCATION</div><h3>Pharmaceutical sciences</h3><p>Bachelor of Pharmacy, Al-Azhar University–Assiut; MSc in Pharmaceutical Sciences, Assiut University; PhD in Pharmaceutical Sciences, Kanazawa University, Japan; and postdoctoral research experience at Yamagata University, Japan.</p></article>
-          <article class="card"><div class="num">RESEARCH INTERESTS</div><h3>Natural products and translation</h3><p>Research interests include pharmacognosy, phytochemistry, natural-product bioactivity, drug delivery and nanotechnology, evidence appraisal, and the scientific assessment of potential herb–drug interactions.</p></article>
-        </div>
-        <p style="margin-top:20px;color:var(--muted);font-size:.92rem">This academic profile is a concise overview, not a complete CV. Publication counts, patent jurisdictions, and individual project claims are intentionally omitted here unless separately verified.</p>
-      </div>
-    </section>
-    <section id="capabilities">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Research support across the full workflow</div>
-          <h2>More than manuscript review.</h2>
-          <p>Use the assistant to plan, evaluate, write, and refine academic work. Outputs should be checked against the original sources and the requirements of the target journal or institution.</p>
-        </div>
-        <div class="grid">
-          <article class="card"><div class="num">01 / LITERATURE</div><h3>Structured literature reviews</h3><p>Develop review questions, organize themes, compare findings, identify evidence gaps, and build a transparent outline for narrative or scoping reviews. Systematic reviews require a predefined protocol and reproducible searches.</p></article>
-          <article class="card"><div class="num">02 / MANUSCRIPTS</div><h3>Critical manuscript review</h3><p>Evaluate novelty, rationale, study design, methods, statistical reporting, interpretation, limitations, tables, figures, and alignment between evidence and conclusions.</p></article>
-          <article class="card"><div class="num">03 / WRITING</div><h3>Academic writing and editing</h3><p>Improve clarity, structure, argumentation, transitions, abstracts, titles, responses to reviewers, and journal-specific presentation without inventing results or overstating claims.</p></article>
-          <article class="card"><div class="num">04 / REFERENCES</div><h3>Reference and DOI checks</h3><p>Check whether cited references and DOI records can be verified, identify incomplete or mismatched bibliographic details, and flag sources that still need direct confirmation.</p></article>
-          <article class="card"><div class="num">05 / RESEARCH DESIGN</div><h3>Research questions and methods</h3><p>Refine research aims, conceptual frameworks, hypotheses, methodology descriptions, analysis plans, and reporting checklists appropriate to the study type.</p></article>
-          <article class="card"><div class="num">06 / REVISION</div><h3>Publication-readiness support</h3><p>Prepare section-by-section revision priorities, assess reviewer comments, strengthen discussion and limitations, and check consistency across the manuscript and supplementary materials.</p></article>
+          <article class="card" id="scholar">
+            <div class="num">01 / ACADEMIC SCHOLARSHIP</div>
+            <h3>Dr. Mahmoud Scholar GPT</h3>
+            <p>Support for literature-review planning, critical manuscript assessment, scientific writing and editing, research-method reasoning, reviewer responses, and reference/DOI checks. Sources and generated claims must be verified before citation.</p>
+            <a class="card-link" href="https://chatgpt.com/g/g-cP7u2HpoY-dr-mahmoud-scholar-gpt" target="_blank" rel="noopener noreferrer">Open Dr. Mahmoud Scholar GPT ↗</a>
+          </article>
+          <article class="card" id="phyto">
+            <div class="num">02 / NATURAL-PRODUCT ANALYSIS</div>
+            <h3>PhytoPrecision</h3>
+            <p>A developing, expert-reviewed and AI-assisted framework intended to organize evidence about medicinal natural products, phytotherapy, and herb–drug interaction questions. Its outputs require source checking and qualified interpretation; the framework is not presented as a clinically validated decision-support system.</p>
+            <a class="card-link" href="https://personalizedmedicine9-stack.github.io/phytoprecision/" aria-label="Return to the PhytoPrecision platform section">Explore PhytoPrecision on this site ↑</a>
+          </article>
+          <article class="card">
+            <div class="num">03 / SHARED PRINCIPLES</div>
+            <h3>Evidence before assertion</h3>
+            <p>Both pathways distinguish established findings from hypotheses, mechanistic suggestions, preclinical results, and clinical evidence. Neither should invent citations, data, validation, or certainty that the underlying evidence does not support.</p>
+            <a class="card-link" href="#scope">Read responsible-use guidance ↓</a>
+          </article>
         </div>
       </div>
     </section>
-    <section id="approach">
+    <section>
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">A structured scientific approach</div>
-          <h2>Natural products deserve careful context.</h2>
-          <p>Research quality depends on the question, study design, source reliability, methods, and strength of inference. The assistant separates established findings from interpretation, uncertainty, and claims requiring verification.</p>
+          <div class="kicker">Scholar GPT capabilities</div>
+          <h2>Strengthen the academic workflow.</h2>
+          <p>For researchers, educators, and scientific authors working across pharmacognosy, medicinal natural products, pharmaceutical sciences, and related biomedical fields.</p>
         </div>
         <div class="grid">
-          <article class="card"><div class="num">01 / EVIDENCE</div><h3>Evidence appraisal</h3><p>Assess study design, source quality, consistency, limitations, and whether the conclusions are supported by the reported results.</p></article>
-          <article class="card"><div class="num">02 / SYNTHESIS</div><h3>Critical synthesis</h3><p>Compare studies carefully, distinguish association from causation, and avoid treating preliminary or conflicting evidence as settled fact.</p></article>
-          <article class="card"><div class="num">03 / VERIFICATION</div><h3>Traceable sources</h3><p>Prioritize identifiable papers and DOI records, and clearly flag citations or factual details that could not be independently confirmed.</p></article>
+          <article class="card"><div class="num">01 / LITERATURE</div><h3>Structured reviews</h3><p>Frame review questions, organize themes, compare findings, identify evidence gaps, and plan narrative or scoping reviews. Systematic reviews still require reproducible searches and a predefined protocol.</p></article>
+          <article class="card"><div class="num">02 / MANUSCRIPTS</div><h3>Critical review</h3><p>Assess rationale, novelty, study design, methods, statistical reporting, interpretation, limitations, and the fit between conclusions and results.</p></article>
+          <article class="card"><div class="num">03 / REFERENCES</div><h3>Source verification</h3><p>Check bibliographic details and DOI records when tools are available, and clearly flag citations or claims that remain unverified.</p></article>
+          <article class="card"><div class="num">04 / WRITING</div><h3>Academic editing</h3><p>Improve argument structure, precision, coherence, abstracts, titles, responses to reviewers, and journal-specific presentation without changing results or overstating claims.</p></article>
+          <article class="card"><div class="num">05 / METHODS</div><h3>Research planning</h3><p>Refine aims, hypotheses, conceptual frameworks, methods descriptions, analysis plans, and reporting checklists appropriate to the study.</p></article>
+          <article class="card"><div class="num">06 / REVISION</div><h3>Publication readiness</h3><p>Prioritize revisions, address reviewer feedback, strengthen limitations, and check consistency across the manuscript and supplementary materials.</p></article>
         </div>
       </div>
     </section>
     <section class="process" id="workflow">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">A transparent workflow</div>
-          <h2>From question to qualified insight.</h2>
-          <p>A practical framework for moving from an academic question to a more rigorous and clearly communicated research output.</p>
+          <div class="kicker">Shared method</div>
+          <h2>Define. Evaluate. Verify. Interpret.</h2>
+          <p>A common discipline connects academic writing with natural-product evidence assessment, without conflating their specific outputs or levels of validation.</p>
         </div>
         <div class="steps">
-          <div class="step"><strong>1. Define</strong><p>Clarify the research question, objectives, audience, and target output.</p></div>
-          <div class="step"><strong>2. Review</strong><p>Examine sources, methods, findings, and evidence gaps.</p></div>
-          <div class="step"><strong>3. Verify</strong><p>Check citations, DOI details, internal consistency, and claim strength.</p></div>
-          <div class="step"><strong>4. Refine</strong><p>Present a structured synthesis with limitations and clear revision priorities.</p></div>
-        </div>
-      </div>
-    </section>
-    <section id="scope">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Responsible use</div>
-          <h2>Scientific education, with clear boundaries.</h2>
-        </div>
-        <div class="scope">
-          <p>Dr. Mahmoud Scholar GPT provides research and educational support. It can make mistakes, and generated citations, DOI metadata, quotations, and factual claims must be checked against the original publication or authoritative record before use. It must not fabricate sources, data, analyses, or study findings. It does not replace expert judgment, formal peer review, a statistician, an ethics committee, or journal instructions. Users remain responsible for research integrity, authorship, disclosure of AI assistance where required, and final submitted content.</p>
+          <div class="step"><strong>1. Define</strong><p>Clarify the question, scope, audience, and intended output.</p></div>
+          <div class="step"><strong>2. Evaluate</strong><p>Assess source quality, methods, findings, and evidence gaps.</p></div>
+          <div class="step"><strong>3. Verify</strong><p>Check references, data provenance, consistency, and claim strength.</p></div>
+          <div class="step"><strong>4. Interpret</strong><p>Present qualified conclusions, uncertainties, and next steps for expert review.</p></div>
         </div>
       </div>
     </section>
     <section>
       <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Academic foundation</div>
+          <h2>Dr. Mahmoud A. H. Mostafa</h2>
+          <p>Academic work spanning pharmacognosy, natural products chemistry, medicinal natural products, phytochemistry, personalized medicine, pharmacogenomics, and evidence-informed approaches to herb–drug interactions.</p>
+        </div>
+        <div class="scope"><p>This site describes research and educational initiatives associated with Dr. Mahmoud Mostafa. Formal titles, affiliations, credentials, publication records, and project claims should be confirmed against current authoritative records before being reused in official materials.</p></div>
+      </div>
+    </section>
+    <section id="scope">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Responsible use</div><h2>Clear boundaries. Human judgment remains central.</h2></div>
+        <div class="scope"><p>These resources support research and education; they do not replace expert judgment, formal peer review, statistical consultation, ethics review, or journal requirements. Generated citations, DOI metadata, quotations, factual claims, and analytical outputs must be checked against original sources. PhytoPrecision is a developing framework and is not represented here as a clinically validated or regulator-approved system. Neither platform should be used as a substitute for individualized medical assessment or treatment decisions. Users remain responsible for research integrity, authorship, disclosure of AI assistance where required, and all submitted or applied conclusions.</p></div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
         <div class="callout">
-          <div><h2>Start with a better question.</h2><p>Use the academic assistant to structure a literature review, critically assess a manuscript, improve scientific writing, or check references and DOI details.</p></div>
-          <a class="btn btn-primary" href="https://chatgpt.com/share/6ad93138-1f74-83eb-96ad-b664f6692abe" target="_blank" rel="noopener noreferrer">Open Dr. Mahmoud Scholar GPT ↗</a>
+          <div><h2>Start with your research objective.</h2><p>Choose Scholar GPT for academic writing and manuscript work, or explore PhytoPrecision for its natural-product evidence framework.</p></div>
+          <a class="btn btn-primary" href="https://chatgpt.com/g/g-cP7u2HpoY-dr-mahmoud-scholar-gpt" target="_blank" rel="noopener noreferrer">Open Scholar GPT ↗</a>
         </div>
       </div>
     </section>
   </main>
   <footer>
-    <div class="wrap footer-inner"><div><strong>Dr. Mahmoud Scholar GPT</strong> · Academic research. Evidence. Precision.</div><div>Academic research support · Verify sources before citation</div></div>
+    <div class="wrap footer-inner"><div><strong>Dr. Mahmoud Research Platform</strong> · PhytoPrecision + Scholar GPT</div><div>Evidence-led research support · Verify sources before use</div></div>
   </footer>
 </body>
 </html>
