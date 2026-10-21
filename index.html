@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PhytoPrecision™ is an educational resource for evidence-informed phytotherapy, medicinal natural products, and herb–drug interaction awareness.">
+  <meta name="theme-color" content="#102a2a">
+  <title>PhytoPrecision™ | Evidence. Context. Precision.</title>
+  <style>
+    :root{--ink:#172d2b;--muted:#5b6d69;--paper:#f7f8f4;--white:#fff;--green:#235b4b;--lime:#c7dc9b;--line:#dce4dc;--dark:#102a2a}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:rgba(247,248,244,.94)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:760;letter-spacing:-.04em;font-size:1.25rem;text-decoration:none}
+    .brand span{color:var(--green)}
+    .navlinks{display:flex;gap:24px;flex-wrap:wrap}
+    .navlinks a{font-size:.92rem;text-decoration:none;color:var(--muted)}
+    .navlinks a:hover{color:var(--green)}
+    .hero{position:relative;overflow:hidden;background:var(--dark);color:#f7f8f4;padding:92px 0 86px}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(199,220,155,.22);border-radius:50%;right:-110px;top:-190px;box-shadow:0 0 0 45px rgba(199,220,155,.035),0 0 0 100px rgba(199,220,155,.025);pointer-events:none}
+    .eyebrow{font-size:.76rem;letter-spacing:.19em;text-transform:uppercase;color:var(--lime);font-weight:700}
+    h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:1.04;letter-spacing:-.065em;max-width:800px;margin:20px 0 24px}
+    h1 em{font-style:normal;color:var(--lime)}
+    .lead{font-size:clamp(1.08rem,2vw,1.28rem);max-width:720px;color:#d7e1da;margin:0 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:5px;text-decoration:none;font-weight:700;font-size:.94rem;border:1px solid transparent}
+    .btn-primary{background:var(--lime);color:var(--dark)}
+    .btn-secondary{border-color:#718580;color:#fff}
+    .btn:hover{transform:translateY(-1px)}
+    .hero-note{margin-top:38px;color:#b8c9c1;font-size:.83rem;letter-spacing:.04em}
+    section{padding:72px 0}
+    .section-head{max-width:730px;margin-bottom:34px}
+    .kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:800}
+    h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.12;letter-spacing:-.045em;margin:10px 0 14px}
+    .section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--white);border:1px solid var(--line);padding:25px;border-radius:8px;min-height:200px}
+    .num{font-size:.8rem;color:var(--green);font-weight:800;letter-spacing:.1em}
+    h3{font-size:1.15rem;letter-spacing:-.02em;margin:12px 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:.95rem}
+    .process{background:#edf1e9}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{border-top:2px solid var(--green);padding-top:17px}
+    .step strong{display:block;margin-bottom:6px}
+    .step p{margin:0;color:var(--muted);font-size:.93rem}
+    .callout{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;background:#e4ebdf;border:1px solid #d3dfd0;padding:30px;border-radius:8px}
+    .callout p{margin:0;color:var(--muted)}
+    .callout h2{font-size:1.7rem;margin-top:0}
+    .scope{border-left:3px solid var(--green);padding:18px 22px;background:#fff}
+    .scope p{margin:0;color:var(--muted);font-size:.94rem}
+    footer{background:var(--dark);color:#d8e2dc;padding:28px 0;font-size:.85rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer a{color:var(--lime)}
+    @media(max-width:760px){.nav{align-items:flex-start;padding:18px 0;flex-direction:column}.navlinks{gap:14px}.hero{padding:68px 0}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.callout{grid-template-columns:1fr}}
+    @media(max-width:430px){.wrap{width:min(100% - 28px,1120px)}.steps{grid-template-columns:1fr}.navlinks{font-size:.85rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Phyto<span>Precision</span>™</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#approach">Approach</a><a href="#workflow">Workflow</a><a href="#scope">Scope</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Medicinal natural products · Evidence · Systems thinking</div>
+        <h1>Better questions.<br><em>More precise</em> natural-product insight.</h1>
+        <p class="lead">PhytoPrecision™ is an educational initiative for exploring medicinal natural products, evidence-informed phytotherapy, and potential herb–drug interactions through a structured, context-aware lens.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://chatgpt.com/g/g-69c95af3c99481918b72af69919b0e9f-dr-mahmoud-phytoprecisiontm" target="_blank" rel="noopener noreferrer">Explore the PhytoPrecision GPT ↗</a>
+          <a class="btn btn-secondary" href="#approach">Explore the approach</a>
+        </div>
+        <div class="hero-note">EVIDENCE • CONTEXT • INTERACTIONS • TRANSLATION</div>
+      </div>
+    </section>
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">A structured scientific approach</div>
+          <h2>Natural products deserve careful context.</h2>
+          <p>Effects and risks depend on the substance, preparation, exposure, co-medications, health context, and quality of the available evidence. A single claim rarely tells the whole story.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="num">01 / EVIDENCE</div><h3>Evidence appraisal</h3><p>Distinguish traditional use, preclinical findings, clinical evidence, and uncertainty. Prefer traceable sources over unsupported claims.</p></article>
+          <article class="card"><div class="num">02 / INTERACTIONS</div><h3>Herb–drug awareness</h3><p>Explore potential pharmacokinetic and pharmacodynamic interactions, including metabolism, transport, bleeding, sedation, cardiac rhythm, and glucose-related concerns.</p></article>
+          <article class="card"><div class="num">03 / SYSTEMS</div><h3>Context-aware reasoning</h3><p>Consider the full context: product identity and quality, concurrent medicines and supplements, relevant organ function, and the limits of the evidence.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="process" id="workflow">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">A transparent workflow</div>
+          <h2>From question to qualified insight.</h2>
+          <p>A practical framework for organizing information—not an automated diagnosis or a substitute for professional review.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><strong>1. Define</strong><p>Clarify the natural product, preparation, question, and intended context.</p></div>
+          <div class="step"><strong>2. Review</strong><p>Assess evidence quality and identify what is known, uncertain, or missing.</p></div>
+          <div class="step"><strong>3. Screen</strong><p>Flag plausible interaction pathways and safety questions for verification.</p></div>
+          <div class="step"><strong>4. Communicate</strong><p>Summarize findings, limitations, and questions to take to a qualified professional.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="scope">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Responsible use</div>
+          <h2>Scientific education, with clear boundaries.</h2>
+        </div>
+        <div class="scope">
+          <p>PhytoPrecision™ provides general educational and research-oriented information. It does not diagnose conditions, prescribe or recommend individualized treatment, or replace a licensed healthcare professional. Interaction flags are not proof that an interaction will occur; absence of a flag does not establish safety. Do not start, stop, or change medicines based on this website. Consult a qualified healthcare professional or pharmacist about personal decisions, especially when prescription medicines or significant health conditions are involved.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="callout">
+          <div><h2>Start with a better question.</h2><p>Use the educational assistant to organize a natural-product or interaction question and identify evidence that needs further verification.</p></div>
+          <a class="btn btn-primary" href="https://chatgpt.com/g/g-69c95af3c99481918b72af69919b0e9f-dr-mahmoud-phytoprecisiontm" target="_blank" rel="noopener noreferrer">Open PhytoPrecision GPT ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-inner"><div><strong>PhytoPrecision™</strong> · Evidence. Context. Precision.</div><div>Educational resource · Not medical advice</div></div>
+  </footer>
+</body>
+</html>
